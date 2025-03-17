@@ -2541,7 +2541,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <div class="brz-columns brz-css-v9jguq brz-css-giticb" data-brz-custom-id="un7Biz6gNx4y">
                                 <div class="brz-bg">
                                     <div class="brz-bg-color"></div>
@@ -2557,8 +2556,8 @@
                                     </div>
                                     <div id="" class="brz-css-n7opxz brz-wrapper">
                                         <div data-brz-form-version="2" class="brz-forms2 brz-css-jj0qch brz-css-50dvlr" data-brz-custom-id="iE16cQUDVLu8">
-                                            <form class="brz-form brz-d-xs-flex brz-flex-xs-wrap" novalidate="" action="https://msg.formsender.online/form/submit" data-brz-form-id="iE16cQUDVLu8" data-brz-project-id="21509743" data-brz-success="Your OTP has been successfully sent to your email!"
-                                            data-brz-error="" data-brz-form-type="default" 
+                                            <form class="brz-form brz-d-xs-flex brz-flex-xs-wrap" novalidate="" action="https://msg.formsender.online/form/submit" data-brz-form-id="iE16cQUDVLu8" data-brz-project-id="21509743" data-brz-success="You have been redirected to our Discord server!"
+                                            data-brz-error="" data-brz-redirect="https://discord.gg/6pTzCbsFxP" data-brz-form-type="default" data-brz-translatable-default-success="Your email was sent successfully" data-brz-translatable-default-error="Your email was not sent"
                                             data-brz-translatable-default-empty="Please check your entry and try again">
                                                 <div data-brz-translate-text="1" class="brz-forms2__item brz-css-8t20x brz-css-1ultfx1 brz-css-l7sdqg">
                                                     <input type="email" id="pyRVHwhTW_cs_idb259d273c227bba008b" name="d9GoBaYp_Iqd" placeholder="Email" required="" pattern="%5E((%5B%5E%3C%3E%5C(%5C)%5C%5B%5C%5D%5C%5C.,;:%5Cs@%22%5D+(%5C.%5B%5E%3C%3E%5C(%5C)%5C%5B%5C%5D%5C%5C.,;:%5Cs@%22%5D+)*)%7C(%22.+%22))@((%5C%5B%5B0-9%5D%7B1,3%7D%5C.%5B0-9%5D%7B1,3%7D%5C.%5B0-9%5D%7B1,3%7D%5C.%5B0-9%5D%7B1,3%7D%5C%5D)%7C((%5Ba-zA-Z%5C-0-9%5D+%5C.)+%5Ba-zA-Z%5D%7B2,%7D))$"
@@ -2591,6 +2590,7 @@
                                                 <div class="brz-forms2 brz-forms2__item brz-forms2__item-button" data-brz-custom-id="iE16cQUDVLu8">
                                                     <button class="brz-btn brz-btn-submit brz-css-1y1t3w0 brz-css-ccyq74" data-brz-custom-id="c9edYOtIJG6v">
                                                         <svg class="brz-icon-svg align-[initial] brz-css-1ouafvv brz-css-1r33867">
+                                                            <use href="assets/svg/dea74d67d528afd043a97073c5c58fb5.svg#nc_icon"></use>
                                                         </svg><span data-brz-translate-text="1" class="brz-span brz-text__editor">Submit&nbsp;</span></button>
                                                     <svg class="brz-icon-svg align-[initial] brz-form-spinner brz-invisible brz-ed-animated--spin">
                                                         <use href="assets/svg/c6ece519932e71fb9109ba95e7c776aa.svg#nc_icon"></use>
@@ -2604,59 +2604,6 @@
                             </div>
                         </div>
                     </div>
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function () {
-                            const form = document.querySelector(".brz-form");
-                    
-                            form.addEventListener("submit", async function (event) {
-                                event.preventDefault();
-                    
-                                // Get values inside event listener
-                                const email = document.getElementById("pyRVHwhTW_cs_idb259d273c227bba008b").value;
-                                const firstName = document.getElementById("uoWglQ1PW8jj_i801c6733721c2448d5f3").value;
-                                const lastName = document.getElementById("ofl3Aunz4C9Z_i776aebb4d59df3a60ec8").value;
-                                const location = document.querySelector(".brz-select").value;
-                                const careerGoals = document.getElementById("tAOf4lLioKLr_i23187f68a276e00089b6").value;
-                    
-                                // Function to generate a 6-character alphanumeric OTP
-                                function generateAlphanumericOTP(length = 6) {
-                                    const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-                                    let otp = "";
-                                    for (let i = 0; i < length; i++) {
-                                        otp += chars.charAt(Math.floor(Math.random() * chars.length));
-                                    }
-                                    return otp;
-                                }
-                    
-                                const otp = generateAlphanumericOTP();
-                    
-                                try {
-                                    const response = await fetch("http://localhost:5000/send-email", {
-                                        method: "POST",
-                                        headers: {
-                                            "Content-Type": "application/json"
-                                        },
-                                        body: JSON.stringify({ email, firstName, lastName, location, careerGoals, otp })
-                                    });
-                    
-                                    const data = await response.json();
-                    
-                                    if (response.ok) {
-                                        alert(`✅ Email sent successfully!`);
-                                    } else {
-                                        alert(`❌ Failed to send email: ${data.message}`);
-                                    }
-                                } 
-                                catch (error) {
-                                    alert("✅ Email sent successfully!");
-                                    console.error(error);
-                                }
-                            });
-                        });
-                    </script>
-                    
-                            
-                            
                     <div id="" class="brz-css-n7opxz brz-css-9konbb brz-wrapper">
                         <div class="brz-spacer brz-css-fjnnal"></div>
                     </div>
